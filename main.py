@@ -20,6 +20,8 @@ def newUpdate():
         for elem in ["monitorID", "monitorURL", "monitorFriendlyName", "alertType", "alertTypeFriendlyName", "alertDuration", "alertDatetime", "monitorAlertContacts"]:
             if elem not in request.json:
                 return {'failed': "Missing required field: " + elem}, 400
+        print(request.json)
+        return {'success': "New update received"}, 200
 
 
 # Service assets
